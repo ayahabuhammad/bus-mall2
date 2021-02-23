@@ -46,6 +46,18 @@ for (let i = 0; i < imgs.length; i++) {
  new Bus(imgs[i]);
 }
 
+
+function retrieve ()
+{
+  console.log(Bus.all);
+  if(localStorage.length >0)
+  {
+    Bus.all = JSON.parse(localStorage.getItem("votes"));
+    render();
+  }
+}
+
+
 function render() {
 
   let imgOneArr = Bus.all[randomNumber(0, Bus.all.length - 1)];
@@ -140,13 +152,13 @@ function chart(){
       labels: names,
       datasets: [{
         label:'Votes',
-        background:'#0000ff',
-        borderColor: 'rgb(25, 199, 132)',
+        background:'DarkCyan',
+        borderColor: 'white',
         data:votes}, 
         {
           label:'Views',
-        background:'#ff0000',
-        borderColor: 'rgb(255, 99, 132)',
+        background:'rgb(134, 49, 49)',
+        borderColor: 'white',
         data:views
         }
 
