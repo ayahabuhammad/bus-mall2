@@ -113,6 +113,7 @@ function handleClick(event) {
     }
  
     imgContainer.removeEventListener('click', handleClick);
+    chart();
 
 
   }
@@ -121,4 +122,35 @@ function handleClick(event) {
 
 function randomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+function chart(){
+  const votes=[];
+  const names=[];
+  const views=[];
+
+  var ctx = document.getElementById("myChart").getContext('2d');
+  for (let i = 0; i < Bus.all.length; i++) {
+  votes.push(Bus.all[i].vote);
+  names.push(Bus.all[i].name);
+  views.push(Bus.all[i].view);    
+  }
+  var chart= new Chart(ctx, {
+    type:'bar',
+    data: {
+      labels: names,
+      datasets: [{
+        label:'Votes',
+        background:'#0000ff',
+        borderColor: 'rgb(25, 199, 132)',
+        data:votes}, 
+        {
+          label:'Views',
+        background:'#ff0000',
+        borderColor: 'rgb(255, 99, 132)',
+        data:views
+        }
+
+      ]
+    },
+  });
 }
