@@ -1,6 +1,6 @@
 'use strict';
 
-const imgs = [
+var imgs = [
   'bag.jpg',
   'banana.jpg',
   'bathroom.jpg',
@@ -24,10 +24,10 @@ const imgs = [
 ];
 
 
-const imgOne = document.getElementById('img-one');
-const imgTwo = document.getElementById('img-two');
-const imgThree = document.getElementById('img-three');
-const imgContainer = document.getElementById('imgContainer');
+var imgOne = document.getElementById('img-one');
+var imgTwo = document.getElementById('img-two');
+var imgThree = document.getElementById('img-three');
+var imgContainer = document.getElementById('imgContainer');
 let totalClicks = 0;
 let checkArr = [];
 
@@ -106,8 +106,8 @@ function handleClick(event) {
   if (totalClicks == 25) {
 
     for (let i = 0; i < Bus.all.length; i++) {
-        const container = document.getElementById('resultList');
-        const result = document.createElement('li');
+        var container = document.getElementById('resultList');
+        var result = document.createElement('li');
         container.appendChild(result);
         result.textContent=`Votes are ${Bus.all[i].vote}, and Views are ${Bus.all[i].view}`;
     }
