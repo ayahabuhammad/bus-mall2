@@ -136,9 +136,9 @@ function randomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 function chart(){
-  const votes=[];
-  const names=[];
-  const views=[];
+  var votes=[];
+  var names=[];
+  var views=[];
 
   var ctx = document.getElementById("myChart").getContext('2d');
   for (let i = 0; i < Bus.all.length; i++) {
