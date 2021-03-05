@@ -1,0 +1,50 @@
+:root{
+    --primary--color:rgb(201,140,140);
+    --secondary--color:DarkCyan;
+}
+
+header{
+    background-color: var(--secondary--color);
+}
+header h1{
+    font-style: oblique;
+    font-size: xx-large;
+    text-align: center;
+}
+
+
+ .nav{
+     text-align: center;
+     color: whitesmoke;
+ }
+.nav1{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    display:inline-flex;
+    font-style: oblique;
+    font-size: xx-large;
+}
+
+
+ body{
+        background-color: rgb(201, 140, 140);
+        
+  }
+
+
+img {
+       float: right;
+       width: 200px;
+       height: 200px;
+       margin-right: 2%;
+       margin-top: 5%;
+       margin-left: 2%;
+       border:5px solid  var(--secondary--color);
+    
+   }
+
+.myChart {
+    background-color: #0d041d;
+    border-color: whitesmoke;
+}
